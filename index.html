@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .a-btn{
+        padding: 4px 10px;
+        background-color: blueviolet;
+      }
+    </style>
+  </head>
+  <body>
+    <a class="a-btn" id="url" href="etransportfj://pages/tabbar/tabbar">返回app</a>
+    <script>
+      const full = window.location.href;
+      console.log("full", full.split("?"));
+      const query = full.split("?")[1];
+      console.log(" full.split('?')[1]", full.split("?")[1]);
+      console.log("query", query);
+      const url = "etransportfj://pages/sign-flow/sign-flow?" + query;
+      document.getElementById("url").href = url;
+    </script>
+  </body>
+</html>
