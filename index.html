@@ -1,29 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
-		<style>
-			.a-btn {
-				padding: 4px 10px;
-				background-color: blueviolet;
-			}
-		</style>
-	</head>
-	<body>
-		<a class="a-btn" href="weixin://">打开微信</a>
-		<a class="a-btn"  href="etransportfj://pages/tabbar/tabbar">返回app1</a>
-		<a class="a-btn" id="url" href="etransportfj://pages/tabbar/tabbar">返回app2</a>
-		<script>
-			const full = window.location.href;
-			console.log("full", full.split("?"));
-			const query = full.split("?")[1];
-			console.log(" full.split('?')[1]", full.split("?")[1]);
-			console.log("query", query);
-			const url = "etransportfj://pages/sign-flow/sign-flow?" + query;
-			document.getElementById("url").href = url;
-			document.getElementById("url").innerHTML = '返回APP:'+url;
-		</script>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>e-transport</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+	  .text{
+		text-decoration: none;
+	  }
+      .wrap {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        border-color: #f5f5f5;
+        background-image: linear-gradient(120deg, #ffffff 0%, #f8efe4 100%);
+        /* background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%); */
+      }
+      .title {
+        font-size: 28px;
+        color: #333;
+        text-align: center;
+        font-weight: bold;
+      }
+      .desc {
+        margin-top: 10px;
+        color: #333;
+        font-size: 20px;
+        text-align: center;
+      }
+      .a-btn {
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .a-link {
+        padding: 10px 20px;
+        background-color: #ed1c24;
+        border-radius: 5px;
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 20px;
+      }
+      .icon {
+        width: 50vw;
+        height: 50vw;
+        margin-top: -50vw;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <svg
+        t="1750844295517"
+        class="icon"
+        viewBox="0 0 1024 1024"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        p-id="2438"
+        width="64"
+        height="64"
+      >
+        <path
+          d="M512 935.68c-233.728 0-423.68-189.952-423.68-423.68S278.272 88.32 512 88.32 935.68 278.272 935.68 512 745.728 935.68 512 935.68z m0-791.04c-202.496 0-367.36 164.864-367.36 367.36S309.504 879.36 512 879.36 879.36 714.496 879.36 512 714.496 144.64 512 144.64z"
+          p-id="2439"
+          data-spm-anchor-id="a313x.search_index.0.i1.58d83a81er3NlK"
+          class="selected"
+          fill="#3cd746"
+        ></path>
+        <path
+          d="M414.72 695.808c-7.936 0-15.872-3.328-21.504-9.984L235.52 500.992c-9.984-11.776-8.704-29.696 3.072-39.68 11.776-9.984 29.696-8.704 39.68 3.072l157.952 184.832c9.984 11.776 8.704 29.696-3.072 39.68-5.376 4.608-11.776 6.912-18.432 6.912z"
+          p-id="2440"
+          data-spm-anchor-id="a313x.search_index.0.i3.58d83a81er3NlK"
+          class="selected"
+          fill="#3cd746"
+        ></path>
+        <path
+          d="M415.232 696.832c-7.68 0-15.36-3.072-20.992-9.472-10.24-11.52-9.216-29.44 2.304-39.68l352-313.6c11.52-10.24 29.44-9.216 39.68 2.304s9.216 29.44-2.304 39.68L433.92 689.664c-5.376 4.864-12.032 7.168-18.688 7.168z"
+          p-id="2441"
+          data-spm-anchor-id="a313x.search_index.0.i2.58d83a81er3NlK"
+          class="selected"
+          fill="#3cd746"
+        ></path>
+      </svg>
+      <a class="text" id="url" href="etransportfj://pages/tabbar/tabbar">
+        <div class="title">操作成功!</div>
+        <div class="desc">点击按钮</div>
+        <div class="a-btn">
+          <div class="a-link">返回 e-transport</div>
+        </div>
+        <div class="desc">继续下一步</div>
+      </a>
+    </div>
+    <script>
+      const full = window.location.href;
+      console.log("full", full.split("?"));
+      const query = full.split("?")[1];
+      console.log(" full.split('?')[1]", full.split("?")[1]);
+      console.log("query", query);
+      const url = "etransportfj://pages/sign-flow/sign-flow?" + query;
+      document.getElementById("url").href = url;
+    </script>
+  </body>
 </html>
